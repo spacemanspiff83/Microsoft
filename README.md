@@ -1,67 +1,81 @@
-# Phase 1 Project Template - Minimum Viable Product (MVP)
+# Phase 1 Data Science project - Microsoft 
 
-![blueprint](images/blueprint.png)
+**Authors**: Arjun Rao
 
-This repository is like a blueprint, providing structure for your first End of Phase Project. We suggest you base your Phase 1 project off of this repository so you can focus less on formatting and organization, and more on the _analysis and communication skills_ that will support your progress through the course. This template is designed to make your project portfolio-ready in order to impress the future employers who will review it. 
+## Overview
 
-## Repository Contents
+This is the first solo project assigned as part of Flatiron school's Data science program. Flatiron school's Data Science program is a bootcamp which delves into the world of data science, giving students in depth knowledge and experience in data science technologies and terminologies to embark on a new career in Data science. As part of the final project in phase 1, we were presented with a problem where Microsoft is looking to establish its own movie studio and is need of guidance on which productions would ensure a successful launch. Data was sourced for multiple online movie databases which outline many data points (production costs, domestic and foreign gross receipts, genre, etc.). 
 
-Below is a list of the contents of this repository - instructions for using them are in the next section.
+## Business Problem
 
-- `README.md`: The README for this repo explaining its contents - you're reading it now.
-- `TEMPLATE_README.md`: An example of a project README that provides a brief overview of your whole project.
-- `dsc-phase1-project-template.ipynb`: A starter Jupyter Notebook with headings, code examples and guiding questions.
-- `create_sql_database.ipynb`: A notebook for creating an SQL database if you would prefer to use SQL for this project.
-- `DS_Project_Presentation_Template.pdf`: A starter slide deck presenting your project - here is an [editable version](https://docs.google.com/presentation/d/1PaiH1bleXnhiPjTPsAXQSiAK0nkaRlseQIr_Yb-0mz0/copy).
-- `data` folder: A folder for the data you reference with your code.
-- `src` folder: A folder containing custom functions.
-- `images` folder: A folder for the images you reference in your files .
-- `.gitignore`: A hidden file that tells git to not track certain files and folders.
+Microsoft's entry into the film industry, however late, does present a unique opportunity. Although Microsoft will be facing stiff competition from other tech companies (Amazon, Netflix, Apple to name a few), it can utilize its current organization to either expand (either under Xbox game studios or Xbox Entertainment Studios) or create a new studio as a new subsidiary. Microsoft task for us is to analyze the current motion picture landscape and advise them on the creation of a successful movie studio. 
 
-## Instructions For Using This Repository
+To begin we first look to answer the following questions. 
 
-### Fork This Repository
-
-1. Fork this repository to your personal account
-   - In GitHub, go to this repository and click the "Fork" button in the upper right.
-   
-2. Change the name of your fork of this repo to a _descriptive_ name of your choosing
-   - In GitHub, go to your fork of this repo -> "Settings" -> "Options" -> "Repository Name" -> "Rename"
-   - Make the name descriptive, since potential employers will read it. Ex: "Microsoft-Movie-Analysis" is better than "Project-1"
-
-3. Use `git clone` to clone your fork of this repo to your local computer
-
-### Work In Your Fork Of This Repository
-
-- Work in the repo clone that you created on your local machine
-- Start writing and coding in the Jupyter Notebook `dsc-phase1-project-template.ipynb`
-- Fill in the README template in `TEMPLATE_README.md`
-- Use `git add`, `git commit`, and `git push` often to update your repo in GitHub
-   - For a refresher on how to do this and why it's important, review Topic 2: Bash and Git
-
-### Use The Slide Template
-
-1. Go to [this link](https://docs.google.com/presentation/d/1PaiH1bleXnhiPjTPsAXQSiAK0nkaRlseQIr_Yb-0mz0/copy) to make an editable copy of the slide deck in your own Google Drive account
-2. Go to "Slide," select "Change Theme," and pick a theme you like so your presentation doesn't look like everyone else's
-
-### Tidy Up Your Project
-
-- Change the file name of the Jupyter Notebook (`dsc-phase1-project-template.ipynb`) to something more descriptive
-- Save an appropriately-named PDF version of your slide deck to the repository
-- Rename the template readme you've been working in by running `git mv TEMPLATE_README.md README.md`
-- Delete unnecessary files from the repo using `git rm`
-   - The presentation PDF: `DS_Project_Presentation_Template.pdf`
-   - This README file: `README.md`
-   - Any unused data files in the `data` folder
-   - Any unused images in the `images` folder
-
-### Submit Your Project
-
-To submit your project, please follow the instructions in the [Project Submission & Review](https://learning.flatironschool.com/courses/2085/pages/project-submission-and-review-online?module_item_id=140538) page on Canvas.
+* Identify the most profitable movie studios
+* Impact of Genre
+* Domestic vs Foreign release
 
 
-### Notes
+## Data
 
-- The visualizations in the notebook use best practices for visualization that you should try to emulate. For example, they have clear axes, descriptive titles, and appropriate number formatting.
-- The `dsc-phase1-project-template.ipynb` is intended to be the _final version_ of your project. The first notebook you create will not look like this. You are encouraged to start with a very disorderly notebook and clean it as you go.
-- If you would like to use SQL for this project, please open the `create_sql_database.ipynb` notebook, and run the cells. The schema for the database is stored in the images/ folder.
+The analysis primarily focuses on 4 datasets extracted from Box Office Mojo, IMDB and the-numbers.com. The datasets focus on the business problem presented as they contain production budgets, domestic and foreign gross, genre,etc. The goal was to determine the highest likelihood of a successful production given the variables above. 
+
+
+
+## Methods
+
+At the start of analysis, it was apparent that the data available would need to be cleaned and formatted so the various datasets could be joined. New consolidated data files were created to simulate a golden source file that contained analysis relevent information. The new data file contained only the columns that were required, all other fields were removed. New columns were added and logic applied to indicate profit or loss. Visualization was done using matplotlib.
+
+
+
+## Results
+
+Most Profitable Studios
+
+(./images/TopStudios.png)
+
+Most profitable Genres
+
+(./images/Profit-loss-genre.png)
+
+Production costs vs. profit/loss
+
+(./images/prod-budget-impact.png)
+
+Release type
+
+(./images/release-type.png)
+
+
+## Conclusions
+
+Based on the analysis done, we can provide the following recommendations:
+* Higher likelihood of success if Microsoft were to produce a film in Action, Adventure and Comedy genres
+* Production budgets greater than $20MM typically yield successful films
+* To maximize chance of a successful production, any new film will need to be released in both domestic and foreign markets, this will help in reaching a wider audience base.
+
+In conclusion, I would recommend that Microsoft release a movie that meets the 3 specific criteria above as they have proven to be successful. 
+Further analysis will be required in the future by adding additional data sets as they become available. It could also be expanded upon by revenue generated on streaming platforms.
+
+
+
+
+## For More Information
+
+Please review our full analysis in [our Jupyter Notebook](./dsc-phase1-project-template.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
+
+For any additional questions, please contact Arjun Rao (arjunmrao@gmail.com)
+
+## Repository Structure
+
+Describe the structure of your repository and its contents, for example:
+
+```
+├── README.md                           <- The top-level README for reviewers of this project
+├── Microsoft.ipynb                     <- Narrative documentation of analysis in Jupyter notebook
+├── data_cleaning.ipynb                 <- Narrative documentation of analysis in Jupyter notebook
+├── Microsoft Project Presentation.pdf  <- PDF version of project presentation
+├── data                                <- Both sourced externally and generated from code
+└── images                              <- Both sourced externally and generated from code
+```
