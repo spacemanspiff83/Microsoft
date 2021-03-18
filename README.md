@@ -33,19 +33,19 @@ At the start of analysis, it was apparent that the data available would need to 
 
 Most Profitable Studios
 
-(./images/TopStudios.png)
+![Top Studios](./images/TopStudios.png)
 
 Most profitable Genres
 
-(./images/Profit-loss-genre.png)
+![Genre profit-loss](./images/Profit-loss-genre.png)
 
 Production costs vs. profit/loss
 
-(./images/prod-budget-impact.png)
+![production impact](./images/prod-budget-impact.png)
 
 Release type
 
-(./images/release-type.png)
+![release type](./images/release-type.png)
 
 
 ## Conclusions
